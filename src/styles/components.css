@@ -1,0 +1,72 @@
+@import './base.css';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s var(--transition-smooth);
+  min-width: 120px;
+  justify-content: center;
+}
+
+.button-primary {
+  background: var(--accent-color);
+  color: var(--bg-primary);
+}
+
+.button-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.game-card {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s var(--transition-smooth);
+}
+
+.game-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.number-button {
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s var(--transition-bounce);
+}
+
+.number-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}

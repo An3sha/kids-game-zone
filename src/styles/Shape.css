@@ -1,0 +1,71 @@
+@import './variables.css';
+@import './animations.css';
+
+.shape {
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer;
+  transition: all 0.3s var(--transition-bounce);
+  position: relative;
+}
+
+.shape::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s var(--transition-smooth);
+}
+
+.shape:hover::after {
+  opacity: 1;
+}
+
+.shape.circle {
+  border-radius: 50%;
+}
+
+.shape.square {
+  border-radius: 1rem;
+}
+
+.shape.triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.shape.star {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Fun gradient colors with subtle animations */
+.shape.red {
+  background: linear-gradient(135deg, #FF6B6B, #FF8787);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.shape.blue {
+  background: linear-gradient(135deg, #74C0FC, #4DABF7);
+  box-shadow: 0 4px 15px rgba(116, 192, 252, 0.3);
+  animation: pulse 2s infinite 0.5s;
+}
+
+.shape.green {
+  background: linear-gradient(135deg, #69DB7C, #40C057);
+  box-shadow: 0 4px 15px rgba(105, 219, 124, 0.3);
+  animation: pulse 2s infinite 1s;
+}
+
+.shape.yellow {
+  background: linear-gradient(135deg, #FFD43B, #FAB005);
+  box-shadow: 0 4px 15px rgba(255, 212, 59, 0.3);
+  animation: pulse 2s infinite 1.5s;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
