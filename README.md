@@ -1,4 +1,4 @@
-# Educational Games Collection
+# EduFun Arcade
 
 A React-based web application featuring a collection of interactive educational games designed to make learning fun for children.
 
